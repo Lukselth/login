@@ -1,13 +1,12 @@
-let personagem = document.querySelector('.pers');
-
-function pular(){
-  if(personagem.classList != 'pule'){
-    personagem.classList.add('pule');
+let inputNome = document.getElementById("inputNome");
+let inputEmail = document.getElementById('inputEmail');
+function verificaInput(){
+  if((inputNome !== "") && (inputNome !== null) && (inputNome !== undefined)){
+    inputNome.value = "";
   }
-  setTimeout(function(){
-    personagem.classList.remove('pule');
-  },500)
+ if((inputEmail !== "") && (inputNome !== null) && (inputEmail !== undefined)){
+   inputEmail.value = "";
+ }
+localStorage.setItem("Nome",inputNome);
 }
-
-
 
